@@ -8,7 +8,10 @@
 ;; require package:
 ;; (prelude-require-packages '(some-package some-other-package))
 
-(require 'ergoemacs-mode)
+
+(prelude-require-packages '(ergoemacs-mode))
+;; (require 'ergoemacs-mode)
+
 (ergoemacs-ignore-prev-global) ; Do not honor previously defined global keys.
 (setq ergoemacs-theme nil) ;; Uses Standard Ergoemacs keyboard theme
 (setq ergoemacs-keyboard-layout "us") ;; Assumes QWERTY keyboard layout
@@ -74,7 +77,11 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- )
+ '(delete-selection-mode t)
+ '(org-CUA-compatible nil)
+ '(org-replace-disputed-keys nil)
+ '(recentf-mode t)
+ '(shift-select-mode nil))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
