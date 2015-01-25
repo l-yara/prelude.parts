@@ -57,6 +57,9 @@
 (require 'goto-last-change)
 (global-set-key  (kbd "C-q") 'goto-last-change)
 
+(define-key isearch-mode-map (kbd "<down>") 'isearch-repeat-forward) ; page down key
+(define-key isearch-mode-map (kbd "<up>") 'isearch-repeat-backward) ; page up key
+
 ;;Switch OFF auto-fill
 (setq auto-fill-mode -1)
 (setq-default fill-column 99999)
