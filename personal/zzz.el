@@ -11,7 +11,7 @@
 (global-set-key (kbd "C-d") 'prelude-kill-whole-line)
 (global-set-key (kbd "<f9>d") 'prelude-duplicate-current-line-or-region)
 (global-set-key (kbd "<C-tab>") 'hippie-expand) ;auto-complete word
-;; comment whole line: M-7 M-; (select-current-line + comment-swim)
+(global-set-key (kbd "M-/") 'hippie-expand) ;auto-complete word
 
 ;; Bastardised version from
 ;; http://endlessparentheses.com/implementing-comment-line.html and
@@ -26,6 +26,7 @@ With negative prefix, apply to -N lines above."
     (comment-or-uncomment-region (line-beginning-position) (goto-char (line-end-position n))))
   (forward-line 1)
   (back-to-indentation))
+;; comment whole line: M-7 M-; (select-current-line + comment-swim)
 (global-set-key (kbd "M-;") #'comment-dwim-lines-or-region)
 
 ;; (load-theme 'solarized-dark t)
