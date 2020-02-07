@@ -1,3 +1,7 @@
+;;; encodings.el -- common init for tabbar operations
+;;;
+;;; Commentary:
+;;; Code:
 ;; copy-paste from https://www.emacswiki.org/emacs/GnuEmacsRussification
 ;; Устанавливаем языковую среду
 (set-language-environment 'Cyrillic-KOI8)
@@ -19,3 +23,5 @@
 
 (modify-coding-system-alist 'file "\\.txt\\'" 'windows-1252)
 (modify-coding-system-alist 'file "\\.org\\'" 'windows-1252)
+
+(provide 'encodings)
